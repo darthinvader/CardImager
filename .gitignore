@@ -118,3 +118,9 @@ dist
 
 # Vite build output
 dist
+
+# macOS system files
+.DS_Store
+
+# Obsidian files in RPG Card Game folder
+RPG\ Card\ Game/.obsidian/
