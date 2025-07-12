@@ -1,0 +1,14 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "My First Card",
+      "description": "This is a sample card."
+    },
+    {
+      "id": 2,
+      "title": "My Second Card",
+      "description": "This is another sample card."
+    }
+  ]
+}
