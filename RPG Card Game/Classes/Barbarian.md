@@ -284,4 +284,5 @@ Certainly! Here is a **single table** with **all cards sorted by ascending Actio
 | Titan’s Grip           | Skill   | 4 Actions         | Gain \(10\) Block. Attacks cost no Actions this turn.                                                         | +5 Athletics    | Holding back a collapsing wall.                    |
 | Avatar of Fury         | Feature | 5 Actions         | Lose all Rage. Reduce cost by 1 per Rage lost. This turn, when you play Attack: gain \(1\) Rage, draw a card. | —               | Surrounded by a storm of fury, primal power.       |
 
+
 ### **6. Item Examples**
