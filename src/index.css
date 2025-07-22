@@ -122,3 +122,161 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Print-specific styles for card printing */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+  
+  * {
+    page-break-inside: avoid;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:page-break-after-always {
+    page-break-after: always;
+  }
+  
+  .print\:break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .print\:break-after-avoid {
+    page-break-after: avoid;
+  }
+  
+  .print\:p-1 {
+    padding: 0.25rem !important;
+  }
+  
+  .print\:gap-1 {
+    gap: 0.25rem !important;
+  }
+  
+  .print\:p-2 {
+    padding: 0.5rem !important;
+  }
+  
+  .print\:gap-2 {
+    gap: 0.5rem !important;
+  }
+  
+  .print\:text-xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .print\:mb-2 {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .print\:w-auto {
+    width: auto !important;
+  }
+  
+  .print\:h-auto {
+    height: auto !important;
+  }
+  
+  .print\:bg-white {
+    background-color: white !important;
+  }
+  
+  .print\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.8rem !important; /* Adjusted for larger cards */
+  }
+  
+  .print\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.4rem !important; /* Adjusted for larger cards */
+  }
+  
+  .print\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.2rem !important; /* Adjusted for larger cards */
+  }
+  
+  /* Enhanced card sizing for better print readability */
+  .print\:w-\[160px\] {
+    width: 180px !important; /* Increased from 160px */
+  }
+  
+  .print\:h-\[220px\] {
+    height: 250px !important; /* Increased from 220px */
+  }
+  
+  /* Enhanced text sizing for print */
+  .text-xs {
+    font-size: 0.7rem !important; /* Slightly larger for print readability */
+    line-height: 1.2 !important;
+  }
+  
+  .text-sm {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Better spacing for cost section in print */
+  .inline-flex.items-center.justify-center.w-6.h-6 {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    font-size: 0.7rem !important;
+  }
+  
+  /* Ensure cost text doesn't get cut off */
+  .text-xs.text-gray-600 {
+    white-space: nowrap !important;
+    overflow: visible !important;
+  }
+  
+  /* Better spacing for card content */
+  .p-3 {
+    padding: 0.5rem !important;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.3rem !important;
+  }
+  
+  .gap-1 {
+    gap: 0.15rem !important;
+  }
+  
+  /* Ensure cards fit well on printed pages */
+  .grid {
+    break-inside: avoid;
+  }
+  
+  /* Remove any default margins and padding that might cause blank pages */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    page-break-after: avoid;
+  }
+  
+  /* Prevent orphaned cards */
+  .grid > * {
+    break-inside: avoid;
+  }
+  
+  /* Standard playing card size approximation with better margins */
+  @page {
+    size: A4;
+    margin: 0.2in; /* Slightly reduced margin for more space */
+  }
+  
+  /* Remove any extra space at start/end */
+  @page :first {
+    margin-top: 0;
+  }
+  
+  @page :last {
+    margin-bottom: 0;
+  }
+}

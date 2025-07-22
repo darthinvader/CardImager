@@ -1,4 +1,4 @@
-## **Vision** 🔭
+  ## **Vision** 🔭
 
 ### **Game Pitch** 🎲
 A tactical, party-based roguelite RPG that blends turn-based combat with deck-building mechanics. Embark on an epic adventure: take on quests, face unique encounters, battle monsters, and slay foes (or unexpected heroes). Discover mythical (and mundane) items and expand your characters’ skills.
