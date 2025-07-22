@@ -27,7 +27,7 @@ export const barbarianStarterCards: GameCard[] = [
         keywords: ['Gain 1 Rage']
       }
     ],
-    image: '😡',
+    image: '😡💥',
     className: 'Barbarian',
     defaultQuantity: 2
   },
@@ -42,7 +42,7 @@ export const barbarianStarterCards: GameCard[] = [
         damage: 3
       }
     ],
-    image: '🪓',
+    image: '⚔️💥',
     className: 'Barbarian',
     defaultQuantity: 3
   }
@@ -61,7 +61,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 6
       }
     ],
-    image: '💀',
+    image: '🦴💀💥',
     expend: true,
     className: 'Barbarian',
     defaultQuantity: 1
@@ -77,7 +77,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 5
       }
     ],
-    image: '🗣️',
+    image: '🗣️💫😵‍💫',
     expend: true,
     className: 'Barbarian',
     defaultQuantity: 1
@@ -93,7 +93,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 10
       }
     ],
-    image: '🩸',
+    image: '🩸⚔️😡',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -108,7 +108,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 3
       }
     ],
-    image: '👊',
+    image: '👊🦷💥',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -123,7 +123,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 8
       }
     ],
-    image: '🔥',
+    image: '�😤🧖⚔️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -138,7 +138,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 6
       }
     ],
-    image: '🏃‍♂️',
+    image: '🏃‍♂️😡⚔️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -153,7 +153,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 0
       }
     ],
-    image: '🌪️',
+    image: '🌪️⚔️💨',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -168,7 +168,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 15
       }
     ],
-    image: '⚡',
+    image: '⚡🌩️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -183,7 +183,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 15
       }
     ],
-    image: '💥',
+    image: '�⚔️�💥',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -200,7 +200,7 @@ export const barbarianClassCards: GameCard[] = [
         heal: 5
       }
     ],
-    image: '👻',
+    image: '👻⚡🔮',
     expend: true,
     className: 'Barbarian',
     defaultQuantity: 1
@@ -216,7 +216,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 8
       }
     ],
-    image: '🌊',
+    image: '🌊🌀💨',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -231,7 +231,7 @@ export const barbarianClassCards: GameCard[] = [
         damage: 0
       }
     ],
-    image: '🌍',
+    image: '�🌋🔥',
     expend: true,
     className: 'Barbarian',
     defaultQuantity: 1
@@ -271,7 +271,7 @@ export const barbarianClassCards: GameCard[] = [
         block: 5
       }
     ],
-    image: '💪',
+    image: '💪💥',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -286,7 +286,7 @@ export const barbarianClassCards: GameCard[] = [
         block: 2
       }
     ],
-    image: '📢',
+    image: '📢⚔️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -300,7 +300,7 @@ export const barbarianClassCards: GameCard[] = [
         description: 'Gain 1 Rage. If you have Wrath, gain 2 additional Rage.'
       }
     ],
-    image: '🩸',
+    image: '🩸😤',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -317,7 +317,7 @@ export const barbarianClassCards: GameCard[] = [
         description: 'Gain Wrath.'
       }
     ],
-    image: '😤',
+    image: '😤💨🧘‍♂️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -360,7 +360,7 @@ export const barbarianClassCards: GameCard[] = [
         description: 'Lose all your Rage. Reduce this card\'s cost by 1 for each Rage you lost. For the rest of this turn, whenever you play an Attack card, gain 1 Rage, and draw a card.'
       }
     ],
-    image: '👹',
+    image: '👹😈',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -380,7 +380,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+2 to Athletics checks (out-of-combat)']
       }
     ],
-    image: '💉',
+    image: '💉⚡💪',
     expend: true,
     className: 'Barbarian',
     defaultQuantity: 1
@@ -397,7 +397,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+2 to Athletics checks (out-of-combat)']
       }
     ],
-    image: '💃',
+    image: '💃⚔️',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -412,7 +412,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+3 to Intimidation checks (out-of-combat)']
       }
     ],
-    image: '🩸',
+    image: '🩸📢',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -427,7 +427,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+2 to Intimidation checks (out-of-combat)']
       }
     ],
-    image: '🎯',
+    image: '🎯💥',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -442,7 +442,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+2 to Intimidation checks (out-of-combat)']
       }
     ],
-    image: '🥁',
+    image: '🥁⚔️💥',
     className: 'Barbarian',
     defaultQuantity: 1
   },
@@ -473,7 +473,7 @@ export const barbarianClassCards: GameCard[] = [
         keywords: ['+3 to Survival checks (out-of-combat)']
       }
     ],
-    image: '🐺',
+    image: '🐺🌙',
     className: 'Barbarian',
     defaultQuantity: 1
   },

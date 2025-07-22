@@ -38,22 +38,22 @@ export function CardBase({ card, size = 'medium', className }: CardBaseProps) {
         sizeClasses[size],
         'flex flex-col',
         'print:break-inside-avoid',
-        // Enhanced dimensions for better print readability
-        'print:w-[180px] print:h-[250px]',
-        'print:p-2', // Slightly less padding in print for more content space
+        // Expanded dimensions for 4-emoji support and better title width
+        'print:w-[240px] print:h-[320px]',
+        'print:p-3',
         className
       )}
     >
-      {/* Header - Fixed height */}
-      <div className="flex justify-between items-start mb-2 h-8 flex-shrink-0">
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-bold text-gray-800 leading-tight truncate">
+      {/* Header - Flexible height for longer titles */}
+      <div className="flex justify-between items-start mb-2 min-h-8 flex-shrink-0">
+        <div className="flex-1 min-w-0 mr-2">
+          <h3 className="text-sm font-bold text-gray-800 leading-tight break-words hyphens-auto print:text-xs print:leading-tight">
             {card.name}
           </h3>
         </div>
-        <div className="flex flex-col items-end ml-2 flex-shrink-0">
-          <div className="text-lg">{cardTypeIcons[card.type]}</div>
-          <div className="text-xs text-gray-600">{card.type}</div>
+        <div className="flex flex-col items-end flex-shrink-0">
+          <div className="text-lg print:text-base">{cardTypeIcons[card.type]}</div>
+          <div className="text-xs text-gray-600 print:text-[0.65rem]">{card.type}</div>
         </div>
       </div>
 
@@ -76,9 +76,9 @@ export function CardBase({ card, size = 'medium', className }: CardBaseProps) {
         )}
       </div>
 
-      {/* Image - Fixed height */}
-      <div className="mb-2 bg-gray-100 rounded border flex items-center justify-center h-16 flex-shrink-0">
-        <span className="text-2xl">{card.image}</span>
+      {/* Image - Larger area for up to 4 emojis */}
+      <div className="mb-2 bg-gray-100 rounded border flex items-center justify-center h-20 flex-shrink-0 print:h-16">
+        <span className="text-3xl print:text-2xl leading-none">{card.image}</span>
       </div>
 
       {/* Effects - Takes remaining space but with fixed container */}

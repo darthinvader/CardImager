@@ -56,11 +56,13 @@ src/
 ### **🃏 `CardBase.tsx`** - Individual Card Component
 - **Purpose**: Renders single card with consistent sizing
 - **Critical Details**:
-  - Fixed print dimensions: `160px × 220px`
+  - Fixed print dimensions: `240px × 320px` (expanded from 160px × 220px)
   - Color-coded by card type
   - Resource cost display
   - Effect text formatting
   - Keyword badges (Expend, Sacrifice, etc.)
+  - **Title Handling**: Uses `break-words` for proper wrapping (no truncation)
+  - **Emoji Display**: `text-2xl` size in `h-20` container (expanded from h-16), supports 1-4 emoji combinations
 
 ### **📄 `CardSheet.tsx`** - Print Layout
 - **Purpose**: Arranges cards in printable grid
@@ -69,10 +71,11 @@ src/
   - Title hidden in print mode
   - Page break optimization
 
-### **📊 `barbarian-cards.ts`** - Data Pattern
+### **📊 `barbarian-cards.ts`** - Data Pattern & Emoji Standards
 - **Structure**: `barbarianStarterCards` & `barbarianClassCards` arrays
 - **Pattern**: Each card follows `GameCard` interface
 - **Extensions**: Copy this pattern for new classes
+- **Emoji Guidelines**: Use 1-4 emoji combinations based on card complexity (see Emoji Design System below)
 
 ## 🎨 **Styling System**
 
@@ -83,10 +86,55 @@ src/
 - 🟣 **Feature**: Purple border/background (`border-purple-500 bg-purple-50`)
 - 🟡 **Skill**: Yellow border/background (`border-yellow-500 bg-yellow-50`)
 
+### **Emoji Design System**
+**Flexible**: Use 1-4 emoji combinations based on card complexity and thematic needs:
+
+**1 Emoji (Simple concepts):**
+- `🛡️` - Basic defense
+- `🧘‍♂️` - Simple meditation/focus
+
+**2 Emojis (Moderate complexity):**
+- `😡💥` - Rage building
+- `⚔️�` - Basic attack
+- `⚡🌩️` - Lightning strike
+- `��` - Demonic themes
+- `🐺🌙` - Primal/night themes
+
+**3 Emojis (Complex abilities):**
+- `🦴💀💥` - Bone Snap (bone + death + impact)
+- `�️💫😵‍💫` - Head Toss (speaking + dizziness + confusion)
+- `🩸⚔️😡` - Blood-Fuelled Slash (blood + weapon + rage)
+- `�🦷💥` - Jawbreaker (punch + tooth + impact)
+- `🏃‍♂️😡⚔️` - Raging Charge (run + anger + weapon)
+- `�️⚔️�` - Reckless Flurry (whirlwind + weapon + wind)
+
+**4 Emojis (Ultimate abilities):**
+- `😠😤🧖⚔️` - Berserker's Fury (angry + steam + steamy person + weapon)
+- `🌐🌋🔥` - Ragnarok themes (world + volcano + fire)
+
+**Research-Based Combinations (from Emojipedia.org):**
+- **Bone/Death**: 🦴 (bone) + 💀 (skull) + 💥 (collision)
+- **Dizzy/Head**: �️ (speaking head) + 💫 (dizzy) + 😵‍💫 (spiral eyes)
+- **Anger/Steam**: � (angry) + 😤 (steam from nose) + 🧖 (person in steamy room)
+- **Cold/Ice**: 🧊 (ice) + ❄️ (snowflake) + 🥶 (cold face)
+- **Fire/Destruction**: � (fire) + 🌋 (volcano) + 🌐 (world destruction)
+
+**Emoji Vocabulary:**
+- Combat: ⚔️🪓👊💥⚡ (weapons and impacts)
+- Rage/Anger: 😡😤🔥💥⚡ (emotion and energy)
+- Defense: 🛡️💪🔄 (protection and strength)
+- Magic: 🌟👻🌊🌍⚡ (mystical elements)
+- Movement: 🏃‍♂️💨🌪️ (speed and motion)
+- Utility: 👁️🧠🎯🛠️ (awareness and tools)
+- Death/Bone: 🦴💀👻 (skeletal and spiritual)
+- Confusion: 🗣️💫😵‍💫 (speaking, dizziness, spiral eyes)
+- Blood/Life: 🩸💉❤️ (blood, injection, life force)
+
 ### **Print Optimization**
 - `@page`: 0.25in margins for maximum space
-- Card dimensions: 160px × 220px (uniform sizing)
+- Card dimensions: 240px × 320px (expanded for better readability)
 - Dynamic gaps: 0.25rem (4 cards) to 1rem (2 cards)
+- Title handling: `break-words` for proper text wrapping
 
 ## 🚀 **Common Tasks & Quick Reference**
 
@@ -94,12 +142,20 @@ src/
 1. **Read**: `/RPG Card Game/Classes/[ClassName].md`
 2. **Create**: `src/data/[classname]-cards.ts`
 3. **Pattern**: Copy `barbarian-cards.ts` structure
-4. **Update**: `CardGenerator.tsx` → `allCardSets` object
-5. **Test**: Print preview for layout verification
+4. **Emoji Design**: Use 1-4 emoji combinations following thematic patterns
+5. **Update**: `CardGenerator.tsx` → `allCardSets` object
+6. **Test**: Print preview for layout verification
+
+### **🎨 Designing Card Emojis**
+1. **Research**: Check [Emojipedia.org](https://emojipedia.org) for appropriate emojis
+2. **Pattern**: Use 1-4 emojis per card based on complexity (simple cards = fewer emojis)
+3. **Consistency**: Follow established patterns for each card type
+4. **Testing**: Verify emojis display correctly at `text-2xl` size in h-20 container
+5. **Themes**: Match emoji combinations to card mechanics and class theme
 
 ### **🔧 Debugging Print Issues**
 - **Check**: `src/index.css` → `@media print` section
-- **Key Classes**: `print:w-[160px] print:h-[220px]`
+- **Key Classes**: `print:w-[240px] print:h-[320px]`
 - **Common Issues**: Page margins, card spacing, blank pages
 
 ### **⚙️ Modifying Card Layout**
@@ -113,6 +169,7 @@ src/
 - **Game Rules**: Read `General Card Creation Rules.md`
 - **Class Abilities**: Check `Classes & Cores.md` + specific class file
 - **Card Data**: Look in `src/data/` folder
+- **Emoji Design**: Follow emoji patterns in instructions or research on Emojipedia
 - **Print Problems**: Check `src/index.css` print section
 - **New Features**: Start with `types/game.ts` for interfaces
 - **Layout Issues**: Focus on `CardBase.tsx` and `CardSheet.tsx`
@@ -130,6 +187,7 @@ src/
 - All cards must be identical size (160px × 220px print)
 - Follow established color coding
 - Maintain resource cost formatting
+- Use 3-emoji combinations for visual consistency
 
 ### **Print Optimization**
 - Minimize page margins and gaps
@@ -140,17 +198,20 @@ src/
 - Follow `GameCard` interface strictly
 - Use established naming conventions
 - Keep data files separate from components
+- Maintain emoji design patterns across classes
 
 ## 🔍 **Quick Diagnosis Guide**
 
 | Issue | Check First | Common Solution |
 |-------|-------------|-----------------|
-| Cards different sizes | `CardBase.tsx` print dimensions | Ensure `print:w-[160px] print:h-[220px]` |
+| Cards different sizes | `CardBase.tsx` print dimensions | Ensure `print:w-[240px] print:h-[320px]` |
 | Blank pages | `CardSheet.tsx` & `index.css` | Remove page breaks, check margins |
 | Cards too cramped | `CardSheet.tsx` gap calculation | Adjust spacing formula |
 | Missing card data | `src/data/` folder | Follow `barbarian-cards.ts` pattern |
 | Print layout broken | `index.css` @media print | Check print-specific classes |
 | New card type needed | `types/game.ts` | Add to `CardType` enum and styling |
+| Emoji not displaying | Check emoji compatibility | Use Emojipedia.org to verify emojis |
+| Emoji too crowded | `CardBase.tsx` container size | Ensure proper spacing in `h-20` container |
 
 ---
 

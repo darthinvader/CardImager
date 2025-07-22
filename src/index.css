@@ -190,26 +190,43 @@
   
   .print\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 0.8rem !important; /* Adjusted for larger cards */
+    gap: 1.2rem !important; /* Adjusted for larger cards */
   }
   
   .print\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 0.4rem !important; /* Adjusted for larger cards */
+    gap: 0.6rem !important; /* Adjusted for larger cards */
   }
   
   .print\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 0.2rem !important; /* Adjusted for larger cards */
+    gap: 0.3rem !important; /* Adjusted for larger cards */
   }
   
-  /* Enhanced card sizing for better print readability */
+  /* Expanded card sizing for 4-emoji support */
+  .print\:w-\[240px\] {
+    width: 240px !important; /* Expanded width for 4 emojis */
+  }
+  
+  .print\:h-\[320px\] {
+    height: 320px !important; /* Expanded height proportionally */
+  }
+  
+  /* Legacy support for old sizing - redirect to new size */
+  .print\:w-\[200px\] {
+    width: 240px !important; /* Updated to new expanded size */
+  }
+  
+  .print\:h-\[280px\] {
+    height: 320px !important; /* Updated to new expanded size */
+  }
+  
   .print\:w-\[160px\] {
-    width: 180px !important; /* Increased from 160px */
+    width: 240px !important; /* Updated to new size */
   }
   
   .print\:h-\[220px\] {
-    height: 250px !important; /* Increased from 220px */
+    height: 320px !important; /* Updated to new size */
   }
   
   /* Enhanced text sizing for print */
