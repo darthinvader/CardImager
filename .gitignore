@@ -125,5 +125,10 @@ dist
 # Obsidian files in RPG Card Game folder
 RPG\ Card\ Game/.obsidian/
 
-# Copilot Procesing
+# AI Assistant temp files
+Copilot-Processing.md
 copilot-processed.md
+.agent_work/
+*.tmp.md
+temp-*.md
+draft-*.md

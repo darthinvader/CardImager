@@ -12,7 +12,7 @@ Instructions for building high-quality ReactJS applications with modern patterns
 - TypeScript for type safety (when applicable)
 - Functional components with hooks as default
 - Follow React's official style guide and best practices
-- Use modern build tools (Vite, Create React App, or custom Webpack setup)
+- Use modern build tools Vite
 - Implement proper component composition and reusability patterns
 
 ## Development Standards
@@ -58,7 +58,7 @@ Instructions for building high-quality ReactJS applications with modern patterns
 - Use `useRef` for accessing DOM elements and storing mutable values
 
 ### Styling
-- Use CSS Modules, Styled Components, or modern CSS-in-JS solutions
+- Use Tailwind
 - Implement responsive design with mobile-first approach
 - Follow BEM methodology or similar naming conventions for CSS classes
 - Use CSS custom properties (variables) for theming
@@ -91,14 +91,14 @@ Instructions for building high-quality ReactJS applications with modern patterns
 
 ### Forms and Validation
 - Use controlled components for form inputs
-- Implement proper form validation with libraries like Formik, React Hook Form
+- Implement proper form validation with libraries like Tanstack Form
 - Handle form submission and error states appropriately
 - Implement accessibility features for forms (labels, ARIA attributes)
 - Use debounced validation for better user experience
 - Handle file uploads and complex form scenarios
 
 ### Routing
-- Use React Router for client-side routing
+- Use Tanstack Router for client-side routing
 - Implement nested routes and route protection
 - Handle route parameters and query strings properly
 - Implement lazy loading for route-based code splitting
