@@ -124,3 +124,6 @@ dist
 
 # Obsidian files in RPG Card Game folder
 RPG\ Card\ Game/.obsidian/
+
+# Copilot Procesing
+copilot-processed.md
